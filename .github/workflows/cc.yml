@@ -28,4 +28,4 @@ jobs:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
-        python main.py
+        sudo python main.py
