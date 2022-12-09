@@ -22,12 +22,10 @@ jobs:
         python-version: 3.8
     - name: Preparing
       run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install scapy
     - name: Run!
       env:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
-        chmod 777 main
-        ./main
+        python main.py
