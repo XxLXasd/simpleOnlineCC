@@ -22,7 +22,7 @@ jobs:
         python-version: 3.8
     - name: Preparing
       run: |
-        pip3 install scapy
+        sudo pip3 install scapy
     - name: Run!
       env:
           THREAD: ${{ secrets.THREAD }}
