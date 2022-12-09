@@ -22,10 +22,10 @@ jobs:
         python-version: 3.8
     - name: Preparing
       run: |
-        pip install scapy
+        pip3 install scapy
     - name: Run!
       env:
           THREAD: ${{ secrets.THREAD }}
           URL: ${{ secrets.URL }} 
       run: |
-        sudo python main.py
+        sudo python3 main.py
